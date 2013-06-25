@@ -12,7 +12,6 @@
 - (IBAction)go:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *address;
 @property (weak, nonatomic) IBOutlet UIWebView *browser;
-
 @end
 
 @implementation ViewController
@@ -23,6 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.browser.scalesPageToFit = YES;
     self.browser.delegate = self;
+    self.address.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
